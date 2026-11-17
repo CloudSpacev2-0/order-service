@@ -32,7 +32,7 @@ jobs:
           platforms: linux/amd64          # Azure Container Apps runs amd64
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/order-serviceatest
+            ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/order-service:${{ steps.vars.outputs.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
